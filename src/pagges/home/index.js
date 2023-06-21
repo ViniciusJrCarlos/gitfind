@@ -9,8 +9,23 @@ function App() {
       <div className="conteudo">
         <img src={background} className="background" alt="background app"/>
         <div className='info'>
-          
-        </div>
+              <div>
+                <input name="usuario" placeholder="@username do git"/>
+                <button>Buscar</button>
+              </div>
+              <div className="perfil">
+                <img src="https://avatars.githubusercontent.com/u/87847070?s=96&v=4" className="profile" alt='profile git' />
+                <div>
+                  <h3>Vinicius Carlos</h3>
+                  <span>@viniciusjrcarlos</span>
+                  <p>descrição</p>
+                </div>
+              </div>
+              <hr />
+              <div>
+                <h4>Repositórios</h4>
+              </div>
+         </div>
       </div>
     </div>
    
