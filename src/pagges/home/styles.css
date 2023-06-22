@@ -31,6 +31,7 @@ input {
     background: transparent;
     font-size: 18px;
     padding: 10px;
+    color:#ffffff;
 
 }
 
@@ -92,4 +93,13 @@ hr {
 
     color: #999999;
    
+}
+
+.repositorio {
+
+    font-size: 32px;
+    color: #ffffff;
+    margin: 12px 0;
+    text-align: center;
+
 }
