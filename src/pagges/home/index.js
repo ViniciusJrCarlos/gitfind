@@ -40,9 +40,16 @@ function App() {
         <img src={background} className="background" alt="background app"/>
         <div className='info'>
               <div>
-                <input name="usuario" value={user} onChange={(event) => setUser(event.target.value)} placeholder="@username do git"/>
+               
+                <input name="usuario" 
+                value={user} 
+                onChange={(event) => setUser(event.target.value)} 
+                placeholder="@username do git"
+                />
                 <button onClick={handleGetData}>Buscar</button>
+              
               </div>
+              
               {currentUser?.name ? (<>
             
                   <div className="perfil">
