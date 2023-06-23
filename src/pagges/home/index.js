@@ -1,8 +1,11 @@
+//import "rbx/index.css";
 import { useState } from 'react';
 import { Header } from '../../components/Header';
 import background from '../../assets/background.png';
 import ItemList, {} from "../../components/Input/ItemList";
 import './styles.css';
+//import "rbx/index.css";
+//import {  Input } from 'rbx';
 
 function App() {
 
@@ -33,50 +36,52 @@ function App() {
   }
 };
 
-  return (
-    <div className="App">
-      <Header />
-      <div className="conteudo">
-        <img src={background} className="background" alt="background app"/>
-        <div className='info'>
-              <div>
-               
-                <input name="usuario" 
-                value={user} 
-                onChange={(event) => setUser(event.target.value)} 
-                placeholder="@username do git"
-                />
-                <button onClick={handleGetData}>Buscar</button>
-              
-              </div>
-              
-              {currentUser?.name ? (<>
+return (
+  <div className="App">
+    <Header />
+    <div className="conteudo">
+      <img src={background} className="background" alt="background app"/>
+      <div className='info'>
+            <div>
+             
+              <input name="usuario" 
+              value={user} 
+              onChange={(event) => setUser(event.target.value)} 
+              placeholder="@username do git"
+              />
+              <br />
+              <button onClick={handleGetData}>Buscar</button>
             
-                  <div className="perfil">
-                  <img src={currentUser.avatar_url} className="profile" alt='profile git' />
-                  <div>
-                    <h3>{currentUser.name}</h3>
-                    <span>@{currentUser.login}</span>
-                    <p>{currentUser.bio}</p>
-                  </div>
-                  </div>
-                  <hr />
-              
-              </> ) : null}
+            </div>
+            
+            {currentUser?.name ? (<>
+          
+                <div className="perfil">
+                <img src={currentUser.avatar_url} className="profile" alt='profile git' />
+                <div>
+                  <h3>{currentUser.name}</h3>
+                  <span>@{currentUser.login}</span>
+                  <p>{currentUser.bio}</p>
+                </div>
+                </div>
+                <hr />
+            
+            </> ) : null}
 
-              {repos?.length ? (
-                  <div>
-                    <h4 className="repositorio">Repositórios</h4>
-                    {repos.map(repo => (
-                      <ItemList title={repo.name} description={repo.description} /> 
-                      ))}
-                  </div>
-                  
-              ) : null}
-        </div>
-     </div>   
-  </div>
-  );
+            {repos?.length ? (
+                <div>
+                  <h4 className="repositorio">Repositórios</h4>
+                  {repos.map(repo => (
+                    <ItemList title={repo.name} description={repo.description} /> 
+                    ))}
+                </div>
+                
+            ) : null}
+      </div>
+   </div>   
+</div>
+);
 }
 
 export default App;
+

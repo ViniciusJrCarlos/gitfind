@@ -25,12 +25,13 @@ input {
 
     border: 1px solid  #999999;
     border-radius: 22px;
-    width: 500px;
+    min-width: 300px;
+    width: 70%;
     height: 50px;
     margin-right: 12px;
     background: transparent;
-    font-size: 18px;
-    padding: 5px;
+    font-size: 30px;
+    padding: 10px;
     color:#ffffff;
 
 }
@@ -40,13 +41,15 @@ button {
 
         border: 1px solid  #999999;
         border-radius: 22px;
-        margin-right: 12px;
+        min-width: 300px;
+        width: 30%;
+        height: 50px;
         background: #20333B;
         font-size: 18px;
         padding: 10px;
         color:#FFFFFF;
-        height: 55px;
-        width: 150px;
+        margin: 20px;
+       
 }
 
 .perfil {
